@@ -1,5 +1,4 @@
 var React = require('react');
-var D = React.DOM;
 var createReactClass = require('create-react-class');
 
 var Symbol = require('./symbol');
@@ -18,7 +17,8 @@ var TransitiveNumber = createReactClass({
         // Invert animation direction when negative number is supplied.
         var inverted = value[0] === '-';
 
-        return D.span(
+        return React.createElement(
+            'span',
             {
                 className: this.props.className,
                 style: {

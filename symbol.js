@@ -1,5 +1,4 @@
 var React = require('react');
-var D = React.DOM;
 var findDOMNode = require('react-dom').findDOMNode
 var createReactClass = require('create-react-class');
 
@@ -47,7 +46,8 @@ var Symbol = createReactClass({
         });
     },
     render: function() {
-        return D.span(
+        return React.createElement(
+            'span',
             {
                 style: {
                     position: 'relative',
@@ -63,7 +63,8 @@ var Symbol = createReactClass({
         );
     },
     renderSpacer: function() {
-        return D.span(
+        return React.createElement(
+            'span',
             {
                 style: {
                     visibility: 'hidden'

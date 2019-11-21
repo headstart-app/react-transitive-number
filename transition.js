@@ -69,7 +69,8 @@ var Transition = createReactClass({
         return this.props.out || !this.state.in;
     },
     render: function() {
-        return D.span(
+        return React.createElement(
+            'span',
             {
                 style: this.getAppearance()
             },
